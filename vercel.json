@@ -9,11 +9,11 @@
     "routes": [
         {
             "src":"/static/js/(.*)",
-            "dest":"/static/$1"
+            "dest":"/static/js/$1"
         },
         {
             "src":"/static/css/(.*)",
-            "dest":"/static/$1"
+            "dest":"/static/css/$1"
         },
         {
             "src":"/static/(.*)",
