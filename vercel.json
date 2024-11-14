@@ -10,7 +10,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/florenciaypunto/wsgi.py"
+            "dest": "florenciaypunto/wsgi.py"
         }
     ]
 }
