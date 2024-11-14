@@ -1,0 +1,6 @@
+Modulos:
+fields.py -- convierte las imagenes a formato webp
+storage.py -- sobreescribe las imagenes que contengan el mismo nombre al reemplazarlas en el edit
+
+models:
+bagsApp -- se agrego multiselecfield y cambio de nombre de las imagenes tomando la id como valor unico

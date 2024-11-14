@@ -1,0 +1,35 @@
+{% load static %}
+<!-- work -->
+<a name="trabajos"></a>
+<section class="work mt-[80px] xl:mt-[150px] relative z-20">
+    <div class="container mx-auto xl:px-0">
+        <!-- text -->
+        <div class="text-center mb-24">
+            <h2 class="work__title h2 mb-4">Sigue Nuestros Proyectos</h2>
+            <p class="work__subtittle max-w-3xl mx-auto">Somos una Empresa dedicada a las Carteas de Calidad con una orientación al diseño exclusivo y minimalista.</p>
+        </div>
+
+        <!-- grid -->
+        <div class="work__grid grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px]">
+            <!-- work 1 -->
+            
+            {% for bag in bags %}
+                <div class="w-full max-w-[548px] h-full mx-auto">
+                    <img class="mb-6" src="{{ bag.image.url }}" alt="">
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <h3>{{ bag.name }}</h3>
+                            <p>{{ bag.description }}</p>
+                        </div>
+                        <a href="{%  url 'bags:page' slug=bag.slug %}">
+                            <button class="bg-accent-secondary hover:bg-accent/20 w-[78px] h-[70px] rounded-full">
+                                <i class="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+                
+        </div>
+    </div>
+</section>

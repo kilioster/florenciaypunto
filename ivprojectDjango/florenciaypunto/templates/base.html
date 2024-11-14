@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+        {% block title %}
+        {% endblock title %}
+            </title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="../static/css/output.css">
+        <!-- ICONS -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css"
+        />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- SWIPER CSS -->
+        <link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+    </head>
+    <body class="bg-gray-100">
+        <!-- Header -->
+        <header class="sticky top-0 h-[90px] shadow-xl z-30 bg-white">
+            <div class="container mx-auto flex justify-between h-full items-center">
+                <!-- logo -->
+                <a href="{% url 'index' %}">
+                    <img class="h-[90px]" src="../media/LogoFYP.webp" alt="">
+                </a>
+
+                <nav>
+                    <!-- nav mobile trigger -->
+                    <div class="cursor-pointer lg:hidden" id="nav_trigger_btn">
+                        <i class="ri-menu-4-line text-4xl text-primary"></i>
+                    </div>
+                    <ul class="fixed w-full h-0 p-0 bg-white overflow-hidden border-t top-[90px] left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 lg:top-0 lg:border-none lg:h-full transition-all duration-300" id="nav_menu">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#carteras">Carteras</a></li>
+                        <li><a href="#trabajos">Trabajos</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- page wrapper -->
+        <main class="max-w-[1920px] mx-auto bg-white overflow-hidden">
+
+            {% block content %}
+            
+            {% endblock content %}
+
+            <!-- footer -->
+            <footer class="footer mt-[80px] xl:mt-[150px] relative z-20">
+                <div class="container mx-auto px-0">
+                    <div class="flex flex-col xl:flex-row xl:gap-[100px] xl:mb-[150px]">
+                        <div class="footer__item w-full max-w-[400px] mx-auto mb-8 text-center xl:text-left">
+                            <!-- logo -->
+                            <a class="flex justify-center xl:justify-start mb-8" href="">
+                                <img src="../media/LogoFYP.webp" alt="">
+                            </a>
+                            <p class="mb-8 text-xl">
+                                Empresa dedicada a la confección de carteras artesanales de Calidad.
+                            </p>
+                            <!-- socials -->
+                            <ul class="text-primary flex gap-[54px] justify-center xl:justify-start">
+                                <li>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 flex flex-col xl:flex-row text-center xl:text-left gap-12 xl:gap-[100px] xl:justify-end">
+                            <div class="footer__item">
+                                <h3 class="h3 mb-3">Paginas</h3>
+                                <ul class="flex flex-col gap-4">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">Nosotros</a></li>
+                                    <li><a href="">Carteras</a></li>
+                                    <li><a href="">Trabajos</a></li>
+                                    <li><a href="">Noticias</a></li>
+                                    <li><a href="">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__item">
+                                <h3 class="h3 mb-3">Servicios</h3>
+                                <ul class="flex flex-col gap-4">
+                                    <li><a href="">Carteras</a></li>
+                                    <li><a href="">Monederos</a></li>
+                                    <li><a href="">Chals</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__item max-w-[260px] mx-auto xl:mx-0">
+                                <h3 class="h3 mb-3">Contacto</h3>
+                                <div>
+                                    <ul class="text-primary flex gap-[10px] justify-center xl:justify-start">
+                                        <li>
+                                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- copyright -->
+                <p class="footer__copyright text-center text-lg py-10">Copyright &copy Florencia Y Punto 2024. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+
+        <!-- scroll reveal -->
+        <script src="../static/js/scrollreveal.min.js"></script>
+        <!-- swiper -->
+        <script src="../static/js/swiper-bundle.min.js"></script>
+        <!-- swiperbag -->
+        <!-- main script -->
+        <script src="../static/js/main.js"></script>
+    </body>
+</html>

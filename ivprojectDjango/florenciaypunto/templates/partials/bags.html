@@ -1,0 +1,41 @@
+{% load static %}
+
+<!-- bags -->
+<a name="carteras"></a>
+<section class="bags mt-[80px] xl:mt-[200px] relative z-20">
+    <div class="bags__bg container mx-auto bg-accent/20 rounded-[70px] px-6">
+
+        <div class="flex flex-col items-center pt-[38px] pb-[48px]">
+            <h2 class="bags__tittle h2 mb-9 text-center">Carteras</h2>
+            <!-- slider -->
+            <div class="w-full">
+                <div class="bags__slider swiper h-[400px]">
+                    <div class="swiper-wrapper">
+
+                        {% for bag in bags %}
+
+                            <div class="swiper-slide">
+                                <!-- item -->
+                                <div class="bags__item w-full max-w-[450px] h-[340px] bg-white rounded-[30px] flex flex-col items-center p-9 mx-auto">
+                                    <div class="h-full">
+                                        <img class="h-full" src="{{ bag.image.url }}" alt="">
+                                        <div class="text-center">
+                                            <h3>
+                                                {{ bag.name }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                        <!-- slide 1 -->
+                        
+                    </div>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
