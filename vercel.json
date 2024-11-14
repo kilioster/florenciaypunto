@@ -1,4 +1,11 @@
 {
+    "builds": [{
+        "src": "florenciaypunto/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+            "runtime": "3.10.6"
+        }
+    }],
     "routes": [
         {
             "src": "/(.*)",
