@@ -8,6 +8,14 @@
     }],
     "routes": [
         {
+            "src":"/static/js/(.*)",
+            "dest":"/static/$1"
+        },
+        {
+            "src":"/static/css/(.*)",
+            "dest":"/static/$1"
+        },
+        {
             "src":"/static/(.*)",
             "dest":"/static/$1"
         },
