@@ -1,27 +1,24 @@
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "florenciaypunto/wsgi.py",
         "use": "@vercel/python",
         "config": {
-            "runtime": "3.10.6"
+          "runtime": "3.10.6"
         }
-    }],
+      }
+    ],
     "routes": [
-        {
-            "src":"/static/js/(.*)",
-            "dest":"/static/js/$1"
-        },
-        {
-            "src":"/static/css/(.*)",
-            "dest":"/static/css/$1"
-        },
-        {
-            "src":"/static/(.*)",
-            "dest":"/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "florenciaypunto/wsgi.py"
-        }
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "/media/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "florenciaypunto/wsgi.py"
+      }
     ]
-}

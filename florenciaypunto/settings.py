@@ -115,6 +115,9 @@ STATICFILES_DIRS = [
     
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Donde Django almacenará los archivos estáticos al ejecutar collectstatic
+
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR /'media'
 
